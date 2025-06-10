@@ -1,0 +1,763 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+    scroll-behavior: smooth;
+   scrollbar-width: 10px;
+   
+  
+  }
+   .container-general{
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    /* margin: 0 30px; */
+    border-bottom: 1px solid transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    
+    overflow: hidden;
+  
+  
+   }
+   .container-general ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  
+   }
+   .logo{
+    margin-left: 30px;
+   }
+   span{
+    color: blueviolet;
+   }
+   .container-general ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+    width: 100px;
+    position: relative;
+   }
+   .container-general ul a:hover{ 
+    color: blueviolet;
+  
+   }
+   .container-general ul a::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: blueviolet;
+    transition: .5s ease-in-out;
+   }
+   .container-general ul a:hover:before{
+  width: 100%;
+   }
+  
+  
+   .container-general button{
+     padding: 7px;
+     border-radius: 10px;
+     background-color: blueviolet;
+     color: #fff;
+     transition: .5s ease-in-out ;
+   }
+   .container-general button:hover{
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+   }
+   .menu-bar{
+    display: none;
+    z-index: 1000;
+    opacity: 1;
+    margin-right: 30px;
+   }
+   .container-general button{
+    margin-right: 30px;
+   }
+    /* --------------response for mobile--------------- */
+  
+    @media (max-width:768px){
+      .nav{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 11.5%;
+        right: -100%;
+        background-color:rgba(128, 128, 128, 0.493);
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 50%;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transition: .5s ease-in-out;
+        overflow: hidden;
+        z-index: 1000;
+        position: fixed;
+       
+        
+     
+      }
+      .container-general ul a{
+        color: black;
+        opacity: 1;
+        z-index: 1000;
+      }
+      .nav.active{
+        right: 0%;
+      }
+      .menu-bar{
+        display: block;
+        
+       }
+    }
+  
+    /* ---------------------home page----------------- */
+     .container-home{
+      
+     }
+    
+    .coontainer-box{
+      
+    
+       background: url("https://img.freepik.com/photos-gratuite/dentiste-femme-outils-dentisterie-isole_1303-13189.jpg?ga=GA1.1.1672533485.1736104127&semt=ais_hybrid&w=740"); 
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      opacity: 0.7;
+      padding-top: 70px;
+    }
+    .box-element1{
+      margin-top: 70px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 500px;
+      height: 300px;
+      margin-left: 50px;
+      z-index: 1000;
+      opacity: 1;
+      
+    }
+    .box-element1 button{
+     width: 200Px;
+     margin: 15px 0;
+     padding: 10px;
+     transition: .5s ease-in-out;
+     border: none;
+     background-color: black;
+      color: #fff;
+  
+    }
+    .box-element1 button:hover{
+      background-color: blueviolet;
+      color: #fff;
+    }
+    .box-element1 h1{
+      padding: 15px 0;
+      font-weight: bold;
+      font-size: 35px;
+    }
+      
+         /* --------------------about ------------------- */
+        .container-about {
+          /* height: 100vh; */
+          background-color: rgba(128, 128, 128, 0.253);
+        }
+     .conatainer-element{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+     }
+     .container-box-about2-1 img{
+      width: 300px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 0px;
+      transition: .5s ease-in-out;
+      position: relative;
+      
+     }
+     .container-box-about2-1 img::before{
+        position: absolute;
+        width: 100%;
+        height:100%;
+        background-color: black;
+        content: "";
+        bottom: 0;
+        z-index: 1000;
+  
+     }
+     .container-box-about2-1 img:hover{
+      transform: scale(1);
+      box-shadow: 3px 3px 15px black, -3px -3px 15px black;
+      cursor: pointer;
+     }
+     .container-box-about2-1{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+     }
+     .container-box-about1{
+      width: 500px;
+      height: 400Px;
+      margin-left: 50px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+     }
+     .container-box-about1 p{
+     width: 400Px;
+     }
+     .container-about h1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 60px;
+      position: relative;
+     }
+     .container-box-about1 h2{
+         padding: 15px 0;
+         font-size: 35px;
+         font-weight: bold;
+     }
+     .container-box-about1 h4{
+      padding: 15px 0;
+      font-weight: bold;
+      font-size: 20px;
+     }
+     .container-box-about1 button{
+      margin: 15px 0;
+      padding: 10px;
+      border: none;
+      background-color: black;
+      color: #fff;
+      width: 200px;
+      transition: .5S ease-in-out;
+     }
+     .container-box-about1 button:hover{
+      color: #fff;
+      background-color: blueviolet;
+      cursor: pointer;
+     }
+     .container-box-about2{
+      margin-right: 40px;
+     }
+     .container-box-about2 h1{
+      padding: 15px 0;
+     }
+     /* .container-box-about2-1{
+        position: relative;
+     }
+     .container-box-about2-1::before {
+      position: absolute;
+      width: 100%;
+      height:100%;
+      background-color: black;
+      content: "";
+      bottom: 0;
+      z-index: 1000;
+  
+     } */
+      .ego{
+        position: relative;
+        overflow: hidden;
+      }
+      .ego::before{
+        position: absolute;
+        width: 100%;
+        height:50%;
+        background-color:  rgba(0, 0, 0, 0.699);
+        color: #fff;
+        content: "";
+        bottom: 0;
+        z-index: 1000;
+        content: "detactrage des dents";
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+        bottom: -100%;
+        transition: .5s ease-in-out;
+      }
+      .ego:hover:before{
+        bottom: 0%;
+      }
+      .ego1{
+        position: relative;
+        overflow: hidden;
+      }
+      .ego1::before{
+        position: absolute;
+        width: 100%;
+        height:50%;
+        background-color: rgba(0, 0, 0, 0.699);
+        content: "";
+        color: #fff;
+        bottom: 0;
+        z-index: 1000;
+        content: "soins des dents";
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+        bottom: -100%;
+        transition: .5s ease-in-out;
+      }
+      .ego1:hover:before{
+        bottom: 0%;
+      }
+      .ego2{
+        position: relative;
+        overflow: hidden;
+      }
+      .ego2::before{
+        position: absolute;
+        width: 100%;
+        height:50%;
+        background-color:  rgba(0, 0, 0, 0.699);
+        content: "";
+        color: #fff;
+        bottom: 0;
+        z-index: 1000;
+        content: "radiologie des dents";
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+        bottom: -100%;
+        transition: .5s ease-in-out;
+      }
+      .ego2:hover:before{
+        bottom: 0%;
+      }
+      .ego3{
+        position: relative;
+        overflow: hidden;
+        
+      }
+      .ego3::before{
+        position: absolute;
+        width: 100%;
+        height:50%;
+        background-color: rgba(0, 0, 0, 0.699);
+        content: "";
+        color: #fff;
+        bottom: 0;
+        z-index: 1000;
+        content: "detactrage des dents";
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-weight: bold;
+        bottom: -100%;
+        transition: .5s ease-in-out;
+      }
+      .ego3:hover:before{
+        bottom: 0%;
+      }
+  
+      /* ---------------responsive ------------------ */
+      @media (max-width:768px){
+        .conatainer-element{
+          flex-direction: column;
+        }
+        .container-box-about2-1{
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+         }
+         .container-about {
+          /* height: 220vh; */
+          background-color: rgba(128, 128, 128, 0.253);
+        }
+        .container-box-about2{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        .container-box-about2{
+          margin-right: 0px;
+         }
+  
+      }
+  
+  
+        /* -------what we dooo------- */
+     .container-3{
+      height: 100vh;
+      background-color: #fff;
+      padding-top: 60px;
+     }
+     .container-3 h1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 34px;
+     }
+     .container-3-boxes{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     margin-left: 70px;
+    justify-content: center;
+    align-items: center;
+     }
+     .container-box-element1 img{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      position: relative;
+     }
+     .container-box-element1{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      position: relative;
+      overflow: hidden;
+     }
+     .container-box-element1::before{
+      content: "blanchisement des dents";
+      position: absolute;
+      width: 100%;
+      height:50%;
+      background-color: rgba(0, 0, 0, 0.699);
+      color: #fff;
+      bottom: 0;
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-weight: bold;
+      left: -100%;
+      transition: .5s ease-in-out;
+     }
+     .container-box-element1:hover:before{
+        left: 0%;
+     }
+     .container-box-element2 img{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+     }
+     .container-box-element2{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      position: relative;
+      overflow: hidden;
+     }
+     .container-box-element2::before{
+      content: "radio ultra vilolet des dents";
+      position: absolute;
+      width: 100%;
+      height:50%;
+      background-color: rgba(0, 0, 0, 0.699);
+      color: #fff;
+      bottom: 0;
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-weight: bold;
+      left: -100%;
+      transition: .5s ease-in-out;
+     }
+     .container-box-element2:hover:before{
+        left: 0%;
+     }
+     .container-box-element3 img{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+     }
+     .container-box-element3{
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      position: relative;
+      overflow: hidden;
+     }
+     .container-box-element3::before{
+      content: "operation des dents";
+      position: absolute;
+      width: 100%;
+      height:50%;
+      background-color: rgba(0, 0, 0, 0.699);
+      color: #fff;
+      bottom: 0;
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-weight: bold;
+      left: -100%;
+      transition: .5s ease-in-out;
+     }
+     .container-box-element3:hover:before{
+        left: 0%;
+     }
+  
+  
+     /* -------------responsive for mobile---------------- */
+     @media (max-width:768px){
+    .container-3-boxes{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .container-3-boxes{
+      margin-left: 10px;
+    }
+  
+     }
+  
+        /* ------------------------clients-------------------------- */
+   
+   
+   .container-clients{
+      height: 100vh; 
+    
+   }
+   
+   
+        .container_client-boxs{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    .contqiner-element-box img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .container-clients h1{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-bottom: 20px;
+    }
+  
+    .container-client-element1{
+      max-width: 600px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /* border: 1px solid black; */
+  
+  
+    }
+    .contqiner-element-box{
+      border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      border-radius: 15px;
+      height: 280px;
+      width: 400px;
+      box-shadow: 3px 3px 20px blueviolet ,  -3px -3px 20px blueviolet;
+      transition: .5s ease-in-out;
+    }
+    .contqiner-element-box:hover{
+      box-shadow: 5px 10px 50px blueviolet ,  -5px -10px 50px blueviolet ;
+    }
+    .contqiner-element-box{
+      transition: .5s ease-in-out;
+    }
+    .contqiner-element-box:hover{
+      background-color: blueviolet;
+     transform:translateY(-5px) ;
+   overflow: auto;
+    }
+    .contqiner-element-box:hover{
+      box-shadow: 2px 3px 15px black;
+    }
+    .container-client-element2{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+      
+    }
+    .contqiner-element-box img{
+        margin-bottom: 10px;
+    }
+    .contqiner-element-box p{
+      width: 270px;
+      font-weight: bold;
+    }
+        .container-client-element1 h1{
+                 margin: 10px 0;
+        }
+        .container-client-element1 p{
+          margin: 10px 0;
+          width: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+        .container-client-element1 button{
+          margin: 10px 0;
+          padding: 10px 20px;
+          background-color: black;
+          color: #fff;
+          border: none;
+          transition: .5s ease-in-out;
+        }
+        .container-client-element1 button:hover{
+          background-color: blueviolet;
+        }
+        .contqiner-element-box h2{
+              padding-bottom: 10px;
+        }
+  
+          /* ----------------responsive for mobile---------------------- */
+          @media (max-width:768px){
+  
+            .container_client-boxs{
+              display: flex;
+              flex-direction: column;
+  
+            }
+            .container-client-element2{
+              display: flex;
+              flex-direction: column;
+            }
+            .container-clients{
+              height: 100vh;
+              padding-top: 300px; 
+             
+            
+           }
+          
+          }
+  
+           /* -------------------------contact ------------------------ */
+           .container-contact{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+           }
+           .container-contact h1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+           }
+           .container-box{
+            display: flex;
+            flex-direction: column;
+           text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+           }
+           .container-parents{
+            display: flex;
+            flex-direction: column;
+           text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            border: 1px solid black;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+         
+           }
+           .container-parents input{
+            padding: 10px 60px;
+            border-radius: 10px;
+            margin: 10px 0;
+            transition: .2s ease;
+           }
+           .container-parents input:hover{
+            box-shadow: 1px 2px, 15px blueviolet, -1px -2px 15px blueviolet;
+            transform: translateX(-10px);
+           }
+  
+            /* ------------------responsive for mobile-------------------- */
+  
+            @media (max-width:768px){
+              .container-contact{
+                
+                padding-top:700px ;
+              }
+              .container-parents{
+                display: flex;
+                flex-direction: column;
+               text-align: center;
+                justify-content: center;
+                align-items: center;
+                width: 350px;
+                border: 1px solid black;
+                height: 500px;
+                border-radius: 10px;
+                overflow: hidden;
+             
+               }
+               .container-contact{
+                height: 150vh;
+                display: flex;
+                flex-direction: column;
+               }
+               /* ------iphone5------- */
+  
+               @media (max-width:330px){
+                .container-contact{
+                
+                  margin-top:220px ;
+                }
+               }
+  
+                /* iphone x */
+                @media (max-width:380px){
+                  .container-contact{
+                  
+                    padding-top:740px ;
+                  }
+                 }
+                 /* iphone 13 */
+                 @media (max-width:395px){
+                  .container-contact{
+                  
+                    padding-top:740px ;
+                  }
+                 }
+                     /* iphone 12 pro max */
+                     @media (max-width:430px){
+                      .container-contact{
+                      
+                        padding-top:750px ;
+                      }
+                     }
+  
+            }
